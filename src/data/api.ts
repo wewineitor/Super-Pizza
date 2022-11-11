@@ -1,4 +1,4 @@
-{
+export const API = {
     "response": {
         "users": [
             {
