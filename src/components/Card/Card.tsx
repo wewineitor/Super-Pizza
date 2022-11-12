@@ -1,11 +1,7 @@
+import { CardProps } from "../../utils/types";
 import { CardContainer, Wrapper } from "./Card.style"
 
-type Props = {
-    title: string,
-    image: string,
-    address: string
-}
-const Card = ({title, image, address}: Props) => {
+const Card = ({title, image, address}: CardProps) => {
     console.log(image);
     return (
         <Wrapper>
