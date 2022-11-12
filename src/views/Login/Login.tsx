@@ -4,15 +4,13 @@ import { Button, Form, Input, Wrapper } from "./Login.style"
 import { useForm } from "react-hook-form";
 import { Alert } from "../../components";
 import { useNavigate } from "react-router-dom";
+import { DataForm } from "../../utils/types";
 
 const Login = () => {
     const { register, handleSubmit } = useForm<DataForm>();
     const navigate = useNavigate()
     
-    type DataForm = {
-        email: string,
-        password: string
-    }
+    
     const onSubmit = (data:DataForm)  => {
         const users = API.response.users.find(user => user.email === data.email && user.password === data.password)
         console.log(data);
@@ -23,7 +21,6 @@ const Login = () => {
             })
         }
         navigate('/Home')
-
     }
     
     return (

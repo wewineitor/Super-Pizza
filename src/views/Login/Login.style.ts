@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 
 /*
-#c92c2c
-#cf6123
-#f3c363
-#f1e9bb
-#5c483a
+#C92C2C
+#CF6123
+#F3C363
+#F1E9BB
+#5C483A
 */
 
 export const Wrapper = styled.div `
