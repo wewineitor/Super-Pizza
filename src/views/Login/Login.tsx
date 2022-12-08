@@ -1,4 +1,3 @@
-
 import { API } from "../../data"
 import { Button, Form, Input, Wrapper } from "./Login.style"
 import { useForm } from "react-hook-form";
@@ -10,7 +9,6 @@ const Login = () => {
     const { register, handleSubmit } = useForm<DataForm>();
     const navigate = useNavigate()
     
-    
     const onSubmit = (data:DataForm)  => {
         const users = API.response.users.find(user => user.email === data.email && user.password === data.password)
         console.log(data);
@@ -20,6 +18,7 @@ const Login = () => {
                 icon: 'error'
             })
         }
+        localStorage.setItem('user', JSON.stringify(users))
         navigate('/Home')
     }
     

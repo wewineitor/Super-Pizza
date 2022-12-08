@@ -1,6 +1,7 @@
 import { Card } from "../../components"
 import { API } from "../../data"
 import { Input } from "./components/Input"
+import { MenuButton } from "./components/MenuButton"
 import { CardsWrapper, Wrapper } from "./Home.style"
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
 
     return (
         <Wrapper>
+            <MenuButton/>
             <Input placeholder="Busca una pizzeria" />
             <CardsWrapper>
                 {
